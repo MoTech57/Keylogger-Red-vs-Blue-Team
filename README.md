@@ -1,75 +1,71 @@
-<h1>🖥️ Keylogger Red-vs-Blue Team 🖥️</h1>
+# 🖥️ Keylogger Red-vs-Blue Team Lab 🖥️  
 
-<h2>Description</h2>
-This lab demonstrates a Python-based keylogger built with the <b>pynput</b> library as part of a cybersecurity exercise. The lab explores both the offensive perspective (how attackers capture keystrokes, compile tools into executables, and simulate exfiltration) and the defensive perspective (how blue teams detect, stop, and prevent such threats).  
+## 📖 Description  
+This lab demonstrates a **Python-based keylogger** using the **pynput** library as part of a red team vs. blue team cybersecurity exercise.  
 
-The keylogger logs keystrokes into a file, which defenders can identify by monitoring processes, file artifacts, and suspicious outbound traffic. To simulate real-world attacker techniques, the project also includes packaging the script into a standalone Windows executable (<b>pylogger.exe</b>) using <b>PyInstaller</b>. This demonstrates how compiled binaries make malware more stealthy, and how defenders can respond through process analysis, binary inspection, and endpoint monitoring.  
+- **Red Team (Attacker):** Creates and packages a keylogger into a Windows executable with **PyInstaller**, simulates delivery through social engineering, and demonstrates keystroke capture.  
+- **Blue Team (Defender):** Detects suspicious processes, investigates keylogger activity, and mitigates the threat using **Windows Task Manager** and monitoring techniques.  
 
-The lab reinforces the importance of endpoint visibility, behavioral detection, and ethical cybersecurity practices while providing a practical red team vs. blue team training exercise.  
-<br />
+The project emphasizes adversarial thinking and defensive countermeasures, providing realistic training for both offensive and defensive security operations.  
 
-<h2>Languages and Utilities Used</h2>
+---
 
-- <b>Python 3.13</b>  
-- <b>pynput</b>  
-- <b>PyInstaller</b>  
-- <b>Task Manager</b>  
+## 🛠️ Languages and Utilities Used  
 
-<h2>Environments Used</h2>
+- Python 3.13  
+- pynput  
+- PyInstaller  
+- Visual Studio Code  
+- Windows Task Manager  
 
-- <b>Windows 10/11 (Vultr VM)</b>  
-- <b>Visual Studio Code</b>  
-- <b>Virtual Environment (venv)</b>  
+---
 
-<h2>Red Team🟥</h2>
+## 🖥️ Environments Used  
 
-<p align="center">
+- Windows 10/11 (Vultr VM)  
+- Active Directory Domain Controller (for authentication testing)  
+- Virtual Environment (venv)  
 
-<b>Active Directory Windows Server will be used for the lab:</b><br/>  
-<img src="https://i.imgur.com/ePrPX0w.png" height="100%" width="100%" alt="Active Directory Setup"/>  
-<br /><br />
+---
 
-<b>Create keylogger.py in Visual Studio Code:</b><br/>  
-<img src="https://i.imgur.com/z1ezUmI.png" height="80%" width="80%" alt="Keylogger Code in VSCode"/>  
-<br /><br />
+## 🔄 Workflow  
 
-<b>Install pynput:</b><br/>  
-<img src="https://i.imgur.com/eXGMEH7.png" height="80%" width="80%" alt="Installing pynput"/>  
-<br /><br />
+### 🔴 Red Team  
 
-<b>Build the Keylogger:</b><br/>  
-<img src="https://i.imgur.com/0cKrMkA.png" height="80%" width="80%" alt="Keylogger Execution"/>  
-<br /><br />
+**Windows Server (Active Directory) used for lab setup:**  
+![AD Setup](https://i.imgur.com/ePrPX0w.png)  
 
-<b>Install PyInstaller:</b><br/>  
-<img src="https://i.imgur.com/NU4WYst.png" height="80%" width="80%" alt="Installing PyInstaller"/>  
-<br /><br />
+**Creating `keylogger.py` in Visual Studio Code:**  
+![Keylogger Code](https://i.imgur.com/z1ezUmI.png)  
 
-<b>Compile keylogger.py into an .exe:</b><br/>  
-<img src="https://i.imgur.com/NKSrqYi.png" height="80%" width="80%" alt="Compiling to EXE with PyInstaller"/>  
-<br /><br />
+**Installing pynput:**  
+![pynput Install](https://i.imgur.com/eXGMEH7.png)  
 
-<b>Locate the file and simulate targeting a victim via email:</b><br/>  
-<img src="https://i.imgur.com/tyHbeEz.png" height="80%" width="80%" alt="Generated Executable File"/>  
-<img src="https://i.imgur.com/XKIvdpF.png" height="40%" width="80%" alt="Email Simulation"/>  
-<br /><br />
+**Running the keylogger:**  
+![Execution](https://i.imgur.com/0cKrMkA.png)  
 
-<h2>Blue Team🟦</h2>
+**Installing PyInstaller:**  
+![PyInstaller](https://i.imgur.com/NU4WYst.png)  
 
-<p align="center">
+**Compiling to executable:**  
+![Compile EXE](https://i.imgur.com/NKSrqYi.png)  
 
-<b>Victims Enters Bamk Information:</b><br/>  
-<img src="https://i.imgur.com/fZq1HF2.png" height="100%" width="100%" alt="Active Directory Setup"/>  
-<br /><br />
+**Delivering payload (email simulation):**  
+![Payload](https://i.imgur.com/tyHbeEz.png)  
+![Email Simulation](https://i.imgur.com/XKIvdpF.png)  
 
-<b>Keylogger captures key strokes:</b><br/>  
-<img src="https://i.imgur.com/pElNzdG.png" height="80%" width="80%" alt="Keylogger Code in VSCode"/>  
-<br /><br />
+---
 
-<b>Cybersecurity professional will load Task Manger and kill tasks:</b><br/>  
-<img src="https://i.imgur.com/CMObJRb.png" height="80%" width="80%" alt="Installing pynput"/>  
-<img src="https://i.imgur.com/UgL7NuF.png" height="80%" width="80%" alt="Installing pynput"/>  
+### 🔵 Blue Team  
 
-<br /><br />
+**Victim enters sensitive info (e.g., banking):**  
+![Victim Input](https://i.imgur.com/fZq1HF2.png)  
 
-</p>
+**Keylogger captures keystrokes:**  
+![Captured Keys](https://i.imgur.com/pElNzdG.png)  
+
+**Defender investigates using Task Manager and kills malicious process:**  
+![Task Manager](https://i.imgur.com/CMObJRb.png)  
+![Kill Task](https://i.imgur.com/UgL7NuF.png)  
+
+---
